@@ -1,0 +1,231 @@
+a. Write a Java code with the class name, “acad,” and a method called “main.”
+   Hard code the program with two integers and print the sum of those two integers.
+   
+                 
+public class acad {
+	public static void main(String args[])
+	{
+		int a=1;
+		int b=2;
+		int c=a+b;
+		System.out.println(c);
+	}
+
+}
+
+
+ b. Rewrite the above code, wherein the inputs are provided by the user at runtime and the output is printed. 
+    
+    
+    import java.util.Scanner;
+    public class acad {
+	public static void main(String args[])
+  	{  
+		Scanner s=new Scanner(System.in);
+		int a;
+		int b;
+		a=s.nextInt();
+		b=s.nextInt();
+		int c=a+b;
+		System.out.println(c);
+	  }
+
+    }
+    
+    
+    c. Write a program with the method name, “sum()” that accepts two parameters from the user and 
+        print the sum of those two numbers. The output format should be:
+                                        First number is:
+                                        Second number is:
+                                        Sum is:
+     
+     
+     
+     import java.util.Scanner;
+
+
+public class acad {
+	public static void main(String args[])
+	{  
+	  Scanner s=new Scanner(System.in);
+	  int a,b;
+	  System.out.println("The First number");
+	  a=s.nextInt();//user types the first number
+	  System.out.println("The Second number is");
+	  b=s.nextInt();//user types the second number
+	  sum(a,b);//variables are passed in the method sum
+	  
+		
+
+}
+
+	private static void sum(int a, int b) {
+		// TODO Auto-generated method stub
+		System.out.println("First number is:"+a);
+		System.out.println("Second number is:"+b);
+		System.out.println("Sum is:"+(a+b));//sum is printed here
+		
+	}
+}
+
+
+
+
+d. Write a program to accept two numbers from “stdin” and find all the odd as well as even numbers present in between them.
+
+
+
+     import java.util.Scanner;
+
+
+public class acad {
+public static void main(String args[])
+{
+	Scanner s=new Scanner(System.in);
+	int a,b;
+	System.out.println("Enter the first number");
+	a=s.nextInt();  //first number from user
+	System.out.println("Enter the second number:");
+	b=s.nextInt();   //second number from user
+	System.out.println("Even numbers are");
+	for(int i=a;i<=b;i++)
+	{
+	    if(i%2==0)
+	    	System.out.println(i);
+	}
+	System.out.println("Odd numbers are");
+	for(int i=a;i<=b;i++)
+	{
+		if(i%2!=0)
+			System.out.println(i);
+	}
+}
+}
+
+
+e. Joe is scared to go to school. When her dad asked for the reason,Joe said that she was unable to complete the task given to her by her teacher. The
+   task was to find the “first 10 multiples” of the number entered from stdin”.
+   
+   
+   
+   
+   
+   import java.util.Scanner;
+
+
+public class acad {
+public static void main(String args[])
+{
+	Scanner s=new Scanner(System.in);
+	int a;
+	System.out.println("The number is:");
+	a=s.nextInt();   //user types the number
+	for(int i=1;i<=10;i++) 
+	{
+		System.out.println(a+" * "+i+" = "+(a*i)); //Multiplied value
+	}
+}
+}
+
+
+
+
+f. Write a program consisting the method “sum()” and demonstrate the concept of method overloading using this method.
+
+   import java.util.Scanner;
+
+
+public class acad {
+public static void main(String args[])
+{
+	Scanner s=new Scanner(System.in);
+System.out.println("1.Sum of two numbers \n2.Sum of three numbers");  
+int a =s.nextInt();
+switch (a){
+case 1 : System.out.println("Enter two numbers");
+int x=s.nextInt();
+int y=s.nextInt();
+sum(x,y);  //two numbers are passed to this method sum
+break;
+case 2 : System.out.println("Enter three numbers");
+int b=s.nextInt();
+int c=s.nextInt();
+int d=s.nextInt();
+sum(b,c,d);  //three numbers are passed here
+break;
+}}
+public static void sum(int a,int b) 
+{
+	System.out.println("Sum of two numbers are "+(a+b));
+}
+public static void sum(int a,int b,int c) 
+{
+	System.out.println("Sum of three numbers are "+(a+b+c));
+}
+}
+
+
+
+
+g. Can you overload a method with the same return type? Explain your answer with proper logic.
+        
+        Yes, it can be overloaded with same return type only if the argument lists  that are passed is different for both methods.
+        Construct a method which involves finding sum for 2 numbers 
+        construct another method which involves finding sum for 3 numbers 
+        here the arguments lists passed are different.
+        This method can be overloaded only if number of parameters differ from each other
+        
+ import java.util.Scanner;
+public class acad { 
+public static int add(int a , int b)
+{ 
+return a+b;
+}
+public static int  add(int a,int b,int c)       
+{
+    int d=a+b+c;
+     return d;
+}
+
+public static void main(String args[])
+{
+    Scanner sc= new Scanner(System.in);
+
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int c=  sc.nextInt();
+    int x=add(a,b);                 
+    System.out.println(x);
+    int y=add(a,b,c);                   
+    System.out.println(y);
+    }
+}
+
+
+h. Write a program in Java using Arrays, that sorts the element in a descending order.
+
+
+ import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class acad { 
+public static void main(String args[]) {
+
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();                               
+int b[]=new int[n];                              
+for(int i=0;i<n;i++)
+{
+    b[i]=sc.nextInt();                            
+}
+Arrays.sort(b);                                    
+for(int i=n-1;i>=0;i--) { System.out.println(b[i]);
+}
+
+}}
+
+        
+
+   
+
